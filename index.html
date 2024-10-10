@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- REMIX- ICON -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="./cs/style.css">
+
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./images/logo/favicon.ico" type="image/x-icon">
+    <title>E-commerence</title>
+</head>
+
+<body>
+
+    <!-- MAIN OVERLAY -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- MODAL -->
+    <div class="modal closed" id="modal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+
+        <div class="modal-content">
+            <button class="modal-close-btn" id="modalCloseBtn">
+                <i class="ri-close-line"></i>
+            </button>
+
+            <img src="./images/newsletter.png" alt="" width="400" height="400">
+
+            <div class="newsletter">
+                <form action="">
+                    <div class="form-header">
+                        <h3>Subscribe Newsletter</h3>
+                        <p>Subscribe the <b>Anon</b> to get latest products and discount update.</p>
+                    </div>
+
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <button class="form-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>    
+        
+
+    <!-- NOTIFICATION TOAST -->
+    <div class="notification-toast closed" id="notificationToast">
+        <button class="toast-close-btn" id="toastCloseBtn">
+            <i class="ri-close-line"></i>
+        </button>
+
+        <div class="toast-content">
+            <div class="toast-banner">
+                <img src="./images/products/jewellery-1.jpg" alt="Rose Gold Earings" width="60px" height="60px">
+            </div>
+
+            <div class="toast-data">
+                <p class="toast-msg">Someone in just new bought</p>
+                <p class="toast-title">Rose Gold Earings</p>
+                <p class="toast-meta"><time datetime="#">2 Mintues</time> Ago</p>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <!-- MAIN HEADER -->
+         <div class="header-main">
+            <div class="container">
+
+                <a href="#" class="logo">
+                    <img src="./images/logo/logo.svg" alt="" class="logo-img">
+                </a>
+
+                <div class="search-field">
+                    <input type="search" name="search" required placeholder="Enter your product name...">
+                    <button class="search-btn">
+                        <i class="ri-search-line"></i>
+                    </button>
+                </div>
+            </div>
+         </div>
+
+        
+        <!-- MOBILE NAVIGATION BAR -->
+        <nav class="mobile-navigation">
+            <button class="user-action" id="mobileMenuOpenBtn">
+                <i  class="ri-menu-line"></i>
+            </button>
+
+            <button class="user-action">
+                <i class="ri-shopping-bag-4-line"></i>
+                <div class="count">0</div>
+            </button>
+
+            <button class="user-action">
+                <i class="ri-home-4-line"></i>
+            </button>
+
+            <button class="user-action">
+                <i class="ri-heart-3-line"></i>
+                <div class="count">0</div>
+            </button>
+
+            <button class="user-action">
+                <i class="ri-layout-grid-line"></i>
+            </button>
+        </nav>
+
+        <!-- MOBILE NAVIGATION MENU LIST -->
+        <div class="mobile-menu has-scrollbar" id="mobileMenu">
+            <div class="mobile-menu-top">
+                <h3 class="menu-title">Menu</h3>
+                <button class="mobile-menu-close" id="mobileMenuCloseBtn">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+
+            <ul class="mobile-menu-list" id="mobile-menu-list">
+                <li class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link">Home</a>
+                </li>
+
+                <li class="mobile-menu-item">
+                    <button class="accordian-btn" id="accordian-btn">
+                        <a href="#" class="mobile-menu-link">Men's</a>
+
+                        <div>
+                            <i class="ri-add-fill add-btn"></i>
+                            <i class="ri-subtract-fill remove-btn"></i>
+                        </div>
+                    </button>
+
+                    <ul class="mobile-menu-subcategory-list" id="accordian-list">
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Shirt</a>
+                        </li>
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Shoes & Jeans</a>
+                        </li>
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Safety Shoes</a>
+                        </li>
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Wallet</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="mobile-menu-item">
+                    <button class="accordian-btn" id="accordian-btn">
+                        <a href="#" class="mobile-menu-link">Women's</a>
+
+                        <div>
+                            <i class="ri-add-fill add-btn"></i>
+                            <i class="ri-subtract-fill remove-btn"></i>
+                        </div>
+                    </button>
+
+                    <ul class="mobile-menu-subcategory-list" id="accordian-list">
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Dress & Frock</a>
+                        </li>
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Earings</a>
+                        </li>
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Necklace</a>
+                        </li>
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Makeup Kit</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="mobile-menu-item">
+                    <button class="accordian-btn" id="accordian-btn">
+                        <a href="#" class="mobile-menu-link">Jewelry</a>
+
+                        <div>
+                            <i class="ri-add-fill add-btn"></i>
+                            <i class="ri-subtract-fill remove-btn"></i>
+                        </div>
+                    </button>
+
+                    <ul class="mobile-menu-subcategory-list" id="accordian-list">
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Earings</a>
+                        </li>
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Couple Rings</a>
+                        </li>
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Necklace</a>
+                        </li>
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Bracelets</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="mobile-menu-item">
+                    <button class="accordian-btn" id="accordian-btn">
+                        <a href="#" class="mobile-menu-link">Perfume</a>
+
+                        <div>
+                            <i class="ri-add-fill add-btn"></i>
+                            <i class="ri-subtract-fill remove-btn"></i>
+                        </div>
+                    </button>
+
+                    <ul class="mobile-menu-subcategory-list" id="accordian-list">
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Clothes Perfume</a>
+                        </li>
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Deodorant</a>
+                        </li>
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Flower Fragrance</a>
+                        </li>
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Air Freshener</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link">Blog</a>
+                </li>
+
+                <li class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link">Hot Offers</a>
+                </li>
+
+
+            </ul>
+
+            <ul class="mobile-menu-bottom">
+                <li class="mobile-menu-item">
+                    <button class="accordian-btn" id="accordian-btn">
+                        <a href="#" class="mobile-menu-link">Currency</a>
+
+                        <i class="ri-arrow-left-s-fill caret-back"></i>
+                    </button>
+
+                    <ul class="mobile-menu-subcategory-list" id="accordian-list">
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">USD &dollar;</a>
+                        </li>
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">EUR &euro;</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="mobile-menu-item">
+                    <button class="accordian-btn" id="accordian-btn">
+                        <a href="#" class="mobile-menu-link">Language</a>
+
+                        <i class="ri-arrow-left-s-fill caret-back"></i>
+                    </button>
+
+                    <ul class="mobile-menu-subcategory-list" id="accordian-list">
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">English</a>
+                        </li>
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">Espanol</a>
+                        </li>
+                        <li class="subcategory-item">
+                            <a href="#" class="subcategory-link">French</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+            </ul>
+
+            <ul class="mobile-menu-social-list">
+                <li class="mobile-menu-social-item">
+                    <a href="#" class="mobile-menu-social-link">
+                        <i class="ri-facebook-circle-fill"></i>
+                    </a>
+                </li>
+                <li class="mobile-menu-social-item">
+                    <a href="#" class="mobile-menu-social-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                </li>
+                <li class="mobile-menu-social-item">
+                    <a href="#" class="mobile-menu-social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                </li>
+                <li class="mobile-menu-social-item">
+                    <a href="#" class="mobile-menu-social-link">
+                        <i class="ri-linkedin-box-fill"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="showcase">
+            <div class="container">
+                <div class="showcase-slider has-scrollbar">
+                    <div class="showcase-item">
+                        <img src="./images/banner-1.jpg" alt="showcase-img">
+
+                        <div class="showcase-data">
+                            <p class="showcase-subtitle">Trending Item</p>
+                            <h2 class="showcase-title">Women's latest fashion sale</h2>
+                            <p class="showcase-price">Starting at <b>20.</b>00</p>
+                            <a href="#" class="showcase-btn">Shop Now</a>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="./images/banner-2.jpg" alt="showcase-img">
+
+                        <div class="showcase-data">
+                            <p class="showcase-subtitle">Trending Accessories</p>
+                            <h2 class="showcase-title">Modern Sunglasses</h2>
+                            <p class="showcase-price">Starting at <b>15.</b>00</p>
+                            <a href="#" class="showcase-btn">Shop Now</a>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="./images/banner-3.jpg" alt="showcase-img">
+
+                        <div class="showcase-data">
+                            <p class="showcase-subtitle">Sale Offer</p>
+                            <h2 class="showcase-title">New fashion summer sale</h2>
+                            <p class="showcase-price">Starting at <b>29.</b>00</p>
+                            <a href="#" class="showcase-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="porduct">
+            <div class="container">
+                <div class="product-container has-scrollbar">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="./images/icons/dress.svg" alt="" width="30">
+                        </div>
+
+                        <div class="product-data">
+                            <div class="product-title">
+                                <h4>Dress and Frock</h4>
+                                <p>(53)</p>
+                            </div>
+
+                            <a href="#" class="product-btn">Show All</a>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="./images/icons/coat.svg" alt="" width="30">
+                        </div>
+
+                        <div class="product-data">
+                            <div class="product-title">
+                                <h4>Winter Wear</h4>
+                                <p>(53)</p>
+                            </div>
+
+                            <a href="#" class="product-btn">Show All</a>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="./images/icons/glasses.svg" alt="" width="30">
+                        </div>
+
+                        <div class="product-data">
+                            <div class="product-title">
+                                <h4>Glasses & Lens</h4>
+                                <p>(53)</p>
+                            </div>
+
+                            <a href="#" class="product-btn">Show All</a>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="./images/icons/shorts.svg" alt="" width="30">
+                        </div>
+
+                        <div class="product-data">
+                            <div class="product-title">
+                                <h4>Short & Jeans</h4>
+                                <p>(53)</p>
+                            </div>
+
+                            <a href="#" class="product-btn">Show All</a>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="./images/icons/tee.svg" alt="" width="30">
+                        </div>
+
+                        <div class="product-data">
+                            <div class="product-title">
+                                <h4>T-shirts</h4>
+                                <p>(53)</p>
+                            </div>
+
+                            <a href="#" class="product-btn">Show All</a>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="./images/icons/jacket.svg" alt="" width="30">
+                        </div>
+
+                        <div class="product-data">
+                            <div class="product-title">
+                                <h4>Jacket</h4>
+                                <p>(53)</p>
+                            </div>
+
+                            <a href="#" class="product-btn">Show All</a>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="./images/icons/watch.svg" alt="" width="30">
+                        </div>
+
+                        <div class="product-data">
+                            <div class="product-title">
+                                <h4>watch</h4>
+                                <p>(53)</p>
+                            </div>
+
+                            <a href="#" class="product-btn">Show All</a>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-img">
+                            <img src="./images/icons/hat.svg" alt="" width="30">
+                        </div>
+
+                        <div class="product-data">
+                            <div class="product-title">
+                                <h4>Hats & Caps</h4>
+                                <p>(53)</p>
+                            </div>
+
+                            <a href="#" class="product-btn">Show All</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW ARRIVAL -->
+        <div class="new-arrival">
+            <div class="container">
+                <h3 class="new-title">New Arrival</h3>
+
+                <div class="new-arrival-wrapper has-scrollbar">
+                    <div class="new-arrival-container">
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/clothes-1.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Relax Short Full Sleeve T-shirt</h4>
+                                <p class="new-content-text">Clothes</p>
+                                <p class="new-content-price">$45.00<del>$12.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/clothes-2.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Girls pink embro design top</h4>
+                                <p class="new-content-text">Clothes</p>
+                                <p class="new-content-price">$61.00<del>$90.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/clothes-3.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Black floral wrap midi skirt</h4>
+                                <p class="new-content-text">Clothes</p>
+                                <p class="new-content-price">$76.00<del>$85.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/shirt-1.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Pure garment dyed cotton shirt</h4>
+                                <p class="new-content-text">Clothes</p>
+                                <p class="new-content-price">$68.00<del>$75.00</del></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="new-arrival-container">
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/clothes-1.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Relax Short Full Sleeve T-shirt</h4>
+                                <p class="new-content-text">Clothes</p>
+                                <p class="new-content-price">$45.00<del>$12.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/clothes-2.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Girls pink embro design top</h4>
+                                <p class="new-content-text">Clothes</p>
+                                <p class="new-content-price">$61.00<del>$90.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/clothes-3.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Black floral wrap midi skirt</h4>
+                                <p class="new-content-text">Clothes</p>
+                                <p class="new-content-price">$76.00<del>$85.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/shirt-1.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Pure garment dyed cotton shirt</h4>
+                                <p class="new-content-text">Clothes</p>
+                                <p class="new-content-price">$68.00<del>$75.00</del></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOP RATED -->
+        <div class="new-arrival">
+            <div class="container">
+                <h3 class="new-title">Top Rated</h3>
+
+                <div class="new-arrival-wrapper has-scrollbar">
+                    <div class="new-arrival-container">
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/watch-3.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">pocket watch leather pouch</h4>
+                                <p class="new-content-text">watches</p>
+                                <p class="new-content-price">$45.00<del>$12.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/jewellery-3.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Silver Deer heart necklace</h4>
+                                <p class="new-content-text">jewellert</p>
+                                <p class="new-content-price">$61.00<del>$90.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/perfume.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">titan 100 Ml womens perfume</h4>
+                                <p class="new-content-text">Perfume</p>
+                                <p class="new-content-price">$76.00<del>$85.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/belt.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Men's Leather Reversible Belt</h4>
+                                <p class="new-content-text">Belt</p>
+                                <p class="new-content-price">$68.00<del>$75.00</del></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="new-arrival-container">
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/jewellery-2.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">platinum Zircon Classic Ring</h4>
+                                <p class="new-content-text">Jewelerry</p>
+                                <p class="new-content-price">$45.00<del>$12.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/watch-1.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Smart watche Vital Plus</h4>
+                                <p class="new-content-text">Watches</p>
+                                <p class="new-content-price">$61.00<del>$90.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/shampoo.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">shampoo conditioner packs</h4>
+                                <p class="new-content-text">Cosmetics</p>
+                                <p class="new-content-price">$76.00<del>$85.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/jewellery-1.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Rose Gold Peacock Earrings</h4>
+                                <p class="new-content-text">jewellery</p>
+                                <p class="new-content-price">$68.00<del>$75.00</del></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TRENDING  -->
+        <div class="new-arrival">
+            <div class="container">
+                <h3 class="new-title">Trending</h3>
+
+                <div class="new-arrival-wrapper has-scrollbar">
+                    <div class="new-arrival-container">
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/sports-1.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Running & Trekking Shoes - White</h4>
+                                <p class="new-content-text">Sports</p>
+                                <p class="new-content-price">$45.00<del>$12.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/sports-2.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Trekking & Running Shoes - black</h4>
+                                <p class="new-content-text">Sports</p>
+                                <p class="new-content-price">$61.00<del>$90.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/party-wear-1.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Womens Party Wear Shoes</h4>
+                                <p class="new-content-text">Sports</p>
+                                <p class="new-content-price">$76.00<del>$85.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/sports-3.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Sports Claw Women's Shoes</h4>
+                                <p class="new-content-text">Sports</p>
+                                <p class="new-content-price">$68.00<del>$75.00</del></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="new-arrival-container">
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/sports-6.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Air Trekking Shoes - white</h4>
+                                <p class="new-content-text">Sports</p>
+                                <p class="new-content-price">$45.00<del>$12.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/shoe-3.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Boot With Suede Detail</h4>
+                                <p class="new-content-text">Boots</p>
+                                <p class="new-content-price">$61.00<del>$90.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/shoe-1.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Men's Leather Formal Wear shoes</h4>
+                                <p class="new-content-text">Formal</p>
+                                <p class="new-content-price">$76.00<del>$85.00</del></p>
+                            </div>
+                        </div>
+
+                        <div class="new-arrival-item">
+                            <div class="new-arrival-img">
+                                <img src="./images/products/shoe-2.jpg" alt="" width="50px">
+                            </div>
+
+                            <div class="new-content">
+                                <h4 class="new-content-title">Casual Men's Brown shoes</h4>
+                                <p class="new-content-text">Casual</p>
+                                <p class="new-content-price">$68.00<del>$75.00</del></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product DEAL  -->
+         <div class="product-deal">
+            <div class="container">
+                <h2 class="new-title">Deal Of The Day</h2>
+                <div class="product-deal-container has-scrollbar">
+                    <div class="product-deal-item">
+                        <div class="product-deal-img">
+                            <img src="./images//products/shampoo.jpg" alt="">
+                        </div>
+
+                        <div class="product-deal-content">
+                            <div class="deal-rating">
+                                <i class="ri-star-s-fill"></i>
+                                <i class="ri-star-s-fill"></i>
+                                <i class="ri-star-s-fill"></i>
+                                <i class="ri-star-s-line"></i>
+                                <i class="ri-star-s-line"></i>
+                            </div>
+
+                            <h2 class="deal-title">shampoo, conditioner & facewash packs</h2>
+
+                            <p class="deal-des">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit amet consectetur Lorem ipsum dolor</p>
+
+                            <p class="deal-price">
+                                $150.00 <del>$200.00</del>
+                            </p>
+
+                            <a href="#" class="deal-btn">Add To Cart</a>
+
+                            <div class="deal-availability">
+                                <p>Already Sold <b>20</b></p>
+                                <p>Available <b>40</b></p>
+                            </div>
+
+                            <div class="deal-line"></div>
+
+                            <div class="deal-offer">
+                                <h4>Hurry Up! Offer Ends In:</h4>
+
+                                <div class="deal-ends">
+                                    <div class="deal-time">
+                                        <p class="number">360</p>
+                                        <p class="text">Days</p>
+                                    </div>
+                                    <div class="deal-time">
+                                        <p class="number">24</p>
+                                        <p class="text">Hours</p>
+                                    </div>
+                                    <div class="deal-time">
+                                        <p class="number">59</p>
+                                        <p class="text">Min</p>
+                                    </div>
+                                    <div class="deal-time">
+                                        <p class="number">00</p>
+                                        <p class="text">Sec</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-deal-item">
+                        <div class="product-deal-img">
+                            <img src="./images//products/jewellery-1.jpg" alt="">
+                        </div>
+
+                        <div class="product-deal-content">
+                            <div class="deal-rating">
+                                <i class="ri-star-s-fill"></i>
+                                <i class="ri-star-s-fill"></i>
+                                <i class="ri-star-s-fill"></i>
+                                <i class="ri-star-s-line"></i>
+                                <i class="ri-star-s-line"></i>
+                            </div>
+
+                            <h2 class="deal-title">Rose Gold diamonds Earring</h2>
+
+                            <p class="deal-des">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit amet consectetur Lorem ipsum dolor</p>
+
+                            <p class="deal-price">
+                                $199.00 <del>$250.00</del>
+                            </p>
+
+                            <a href="#" class="deal-btn">Add To Cart</a>
+
+                            <div class="deal-availability">
+                                <p>Already Sold <b>15</b></p>
+                                <p>Available <b>50</b></p>
+                            </div>
+
+                            <div class="deal-line"></div>
+
+                            <div class="deal-offer">
+                                <h4>Hurry Up! Offer Ends In:</h4>
+
+                                <div class="deal-ends">
+                                    <div class="deal-time">
+                                        <p class="number">360</p>
+                                        <p class="text">Days</p>
+                                    </div>
+                                    <div class="deal-time">
+                                        <p class="number">24</p>
+                                        <p class="text">Hours</p>
+                                    </div>
+                                    <div class="deal-time">
+                                        <p class="number">59</p>
+                                        <p class="text">Min</p>
+                                    </div>
+                                    <div class="deal-time">
+                                        <p class="number">00</p>
+                                        <p class="text">Sec</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+         <!-- PRODUCT LIST -->
+         <div class="product-list">
+            <div class="container">
+                <h2 class="new-title">New product</h2>
+
+                <div class="product-list-container">
+                    <div class="product-list-item">
+                        <div class="product-list-img">
+                            <img src="./images/products/jacket-3.jpg" alt="jacket" width="300px" class="img-1">
+                            <img src="./images/products/jacket-4.jpg" alt="" width="300px" class="img-2">
+                            <p class="badge">15%</p>
+
+                            <div class="product-list-actions">
+
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-heart-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-repeat-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-shopping-bag-line"></i>
+                                </button>
+            
+                              </div>
+                        </div>
+
+                        <div class="product-list-content">
+                            <a href="#" class="list-category">Jacket</a>
+
+                            <a href="#">
+                                <h3 class="list-title">Mens Winter Leathers Jackets</h3>
+                            </a>
+
+                           <div class="rating">
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-line"></i>
+                           </div>
+
+                           <div class="product-price-box">
+                            <p class="product-item-price">$48.00</p>
+                            <del>$75.00</del>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="product-list-item">
+                        <div class="product-list-img">
+                            <img src="./images/products/shirt-1.jpg" alt="jacket" width="300px" class="img-1">
+                            <img src="./images/products/shirt-2.jpg" alt="" width="300px" class="img-2">
+                            <p class="badge">15%</p>
+
+                            <div class="product-list-actions">
+
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-heart-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-repeat-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-shopping-bag-line"></i>
+                                </button>
+            
+                              </div>
+                        </div>
+
+                        <div class="product-list-content">
+                            <a href="#" class="list-category">Shirt</a>
+
+                            <a href="#">
+                                <h3 class="list-title">Pure Garment Dyed Cotton Shirt</h3>
+                            </a>
+
+                           <div class="rating">
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-line"></i>
+                           </div>
+
+                           <div class="product-price-box">
+                            <p class="product-item-price">$48.00</p>
+                            <del>$75.00</del>
+                          </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="product-list-item">
+                        <div class="product-list-img">
+                            <img src="./images/products/jacket-5.jpg" alt="jacket" width="300px" class="img-1">
+                            <img src="./images/products/jacket-6.jpg" alt="" width="300px" class="img-2">
+                            <p class="badge">15%</p>
+
+                            <div class="product-list-actions">
+
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-heart-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-repeat-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-shopping-bag-line"></i>
+                                </button>
+            
+                              </div>
+                        </div>
+
+                        <div class="product-list-content">
+                            <a href="#" class="list-category">Jakcet</a>
+
+                            <a href="#">
+                                <h3 class="list-title">MEN Yarn Fleece Full-Zip Jacket</h3>
+                            </a>
+
+                           <div class="rating">
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-line"></i>
+                           </div>
+
+                           <div class="product-price-box">
+                            <p class="product-item-price">$48.00</p>
+                            <del>$75.00</del>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="product-list-item">
+                        <div class="product-list-img">
+                            <img src="./images/products/clothes-3.jpg" alt="jacket" width="300px" class="img-1">
+                            <img src="./images/products/clothes-4.jpg" alt="" width="300px" class="img-2">
+                            <p class="badge">15%</p>
+
+                            <div class="product-list-actions">
+
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-heart-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-repeat-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-shopping-bag-line"></i>
+                                </button>
+            
+                              </div>
+                        </div>
+
+                        <div class="product-list-content">
+                            <a href="#" class="list-category">Skirt</a>
+
+                            <a href="#">
+                                <h3 class="list-title">Black Floral Wrap Midi Skirt</h3>
+                            </a>
+
+                           <div class="rating">
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-line"></i>
+                           </div>
+
+                           <div class="product-price-box">
+                            <p class="product-item-price">$48.00</p>
+                            <del>$75.00</del>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="product-list-item">
+                        <div class="product-list-img">
+                            <img src="./images/products/shoe-2.jpg" alt="jacket" width="300px" class="img-1">
+                            <img src="./images/products/shoe-2_1.jpg" alt="" width="300px" class="img-2">
+                            <p class="badge">15%</p>
+
+                            <div class="product-list-actions">
+
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-heart-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-repeat-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-shopping-bag-line"></i>
+                                </button>
+            
+                              </div>
+                        </div>
+
+                        <div class="product-list-content">
+                            <a href="#" class="list-category">Causal</a>
+
+                            <a href="#">
+                                <h3 class="list-title">Causal Men's Brown Shoes</h3>
+                            </a>
+
+                           <div class="rating">
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-line"></i>
+                           </div>
+
+                           <div class="product-price-box">
+                            <p class="product-item-price">$48.00</p>
+                            <del>$75.00</del>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="product-list-item">
+                        <div class="product-list-img">
+                            <img src="./images/products/watch-3.jpg" alt="jacket" width="300px" class="img-1">
+                            <img src="./images/products/watch-4.jpg" alt="" width="300px" class="img-2">
+                            <p class="badge">15%</p>
+
+                            <div class="product-list-actions">
+
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-heart-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-repeat-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-shopping-bag-line"></i>
+                                </button>
+            
+                              </div>
+                        </div>
+
+                        <div class="product-list-content">
+                            <a href="#" class="list-category">Watch</a>
+
+                            <a href="#">
+                                <h3 class="list-title">Pocket Watch Lether Pouch</h3>
+                            </a>
+
+                           <div class="rating">
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-line"></i>
+                           </div>
+
+                           <div class="product-price-box">
+                            <p class="product-item-price">$48.00</p>
+                            <del>$75.00</del>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="product-list-item">
+                        <div class="product-list-img">
+                            <img src="./images/products/watch-1.jpg" alt="jacket" width="300px" class="img-1">
+                            <img src="./images/products/watch-2.jpg" alt="" width="300px" class="img-2">
+                            <p class="badge">15%</p>
+
+                            <div class="product-list-actions">
+
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-heart-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-repeat-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-shopping-bag-line"></i>
+                                </button>
+            
+                              </div>
+                        </div>
+
+                        <div class="product-list-content">
+                            <a href="#" class="list-category">Watches</a>
+
+                            <a href="#">
+                                <h3 class="list-title">Smart Watch Vital Plus</h3>
+                            </a>
+
+                           <div class="rating">
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-line"></i>
+                           </div>
+
+                           <div class="product-price-box">
+                            <p class="product-item-price">$48.00</p>
+                            <del>$75.00</del>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="product-list-item">
+                        <div class="product-list-img">
+                            <img src="./images/products/party-wear-1.jpg" alt="jacket" width="300px" class="img-1">
+                            <img src="./images/products/party-wear-2.jpg" alt="" width="300px" class="img-2">
+                            <p class="badge">15%</p>
+
+                            <div class="product-list-actions">
+
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-heart-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-repeat-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-shopping-bag-line"></i>
+                                </button>
+            
+                              </div>
+                        </div>
+
+                        <div class="product-list-content">
+                            <a href="#" class="list-category">Pretty Wear</a>
+
+                            <a href="#">
+                                <h3 class="list-title">Women Party Wear Shoes</h3>
+                            </a>
+
+                           <div class="rating">
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-line"></i>
+                           </div>
+
+                           <div class="product-price-box">
+                            <p class="product-item-price">$48.00</p>
+                            <del>$75.00</del>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="product-list-item">
+                        <div class="product-list-img">
+                            <img src="./images/products/jacket-1.jpg" alt="jacket" width="300px" class="img-1">
+                            <img src="./images/products/jacket-2.jpg" alt="" width="300px" class="img-2">
+                            <p class="badge">15%</p>
+
+                            <div class="product-list-actions">
+
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-heart-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-repeat-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-shopping-bag-line"></i>
+                                </button>
+            
+                              </div>
+                        </div>
+
+                        <div class="product-list-content">
+                            <a href="#" class="list-category">Jacket</a>
+
+                            <a href="#">
+                                <h3 class="list-title">Men's winter leather jacket</h3>
+                            </a>
+
+                           <div class="rating">
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-line"></i>
+                           </div>
+
+                           <div class="product-price-box">
+                            <p class="product-item-price">$48.00</p>
+                            <del>$75.00</del>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="product-list-item">
+                        <div class="product-list-img">
+                            <img src="./images/products/sports-2.jpg" alt="jacket" width="300px" class="img-1">
+                            <img src="./images/products/sports-4.jpg" alt="" width="300px" class="img-2">
+                            <p class="badge">15%</p>
+
+                            <div class="product-list-actions">
+
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-heart-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-repeat-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-shopping-bag-line"></i>
+                                </button>
+            
+                              </div>
+                        </div>
+
+                        <div class="product-list-content">
+                            <a href="#" class="list-category">Sport</a>
+
+                            <a href="#">
+                                <h3 class="list-title">Trekking & Running Shoes - Black</h3>
+                            </a>
+
+                           <div class="rating">
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-line"></i>
+                           </div>
+
+                           <div class="product-price-box">
+                            <p class="product-item-price">$48.00</p>
+                            <del>$75.00</del>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="product-list-item">
+                        <div class="product-list-img">
+                            <img src="./images/products/shoe-1.jpg" alt="jacket" width="300px" class="img-1">
+                            <img src="./images/products/shoe-1_1.jpg" alt="" width="300px" class="img-2">
+                            <p class="badge">15%</p>
+
+                            <div class="product-list-actions">
+
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-heart-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-repeat-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-shopping-bag-line"></i>
+                                </button>
+            
+                              </div>
+                        </div>
+
+                        <div class="product-list-content">
+                            <a href="#" class="list-category">formal</a>
+
+                            <a href="#">
+                                <h3 class="list-title">Men's leather formal wear shoes</h3>
+                            </a>
+
+                           <div class="rating">
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-line"></i>
+                           </div>
+
+                           <div class="product-price-box">
+                            <p class="product-item-price">$48.00</p>
+                            <del>$75.00</del>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="product-list-item">
+                        <div class="product-list-img">
+                            <img src="./images/products/shorts-1.jpg" alt="jacket" width="300px" class="img-1">
+                            <img src="./images/products/shorts-2.jpg" alt="" width="300px" class="img-2">
+                            <p class="badge">15%</p>
+
+                            <div class="product-list-actions">
+
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-heart-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-repeat-line"></i>
+                                </button>
+            
+                                <button class="product-list-actions-btn">
+                                    <i class="ri-shopping-bag-line"></i>
+                                </button>
+            
+                              </div>
+                        </div>
+
+                        <div class="product-list-content">
+                            <a href="#" class="list-category">Shorts</a>
+
+                            <a href="#">
+                                <h3 class="list-title">Better Basics French Terry Sweatshorts</h3>
+                            </a>
+
+                           <div class="rating">
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-fill"></i>
+                             <i class="ri-star-s-line"></i>
+                           </div>
+
+                           <div class="product-price-box">
+                            <p class="product-item-price">$48.00</p>
+                            <del>$75.00</del>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+         <!-- TESTIMONIAL -->
+          <div class="testimonial">
+            <div class="container">
+                <div class="testimonial-item">
+                    <h2 class="new-title">Testimonial</h2>
+
+                    <div class="testimonial-card">
+
+                        <img src="./images/testimonial-1.jpg" alt="alan doe" class="testimonial-banner" width="80" height="80">
+          
+                        <p class="testimonial-name">Alan Doe</p>
+          
+                        <p class="testimonial-title">CEO &amp; Founder Invision</p>
+          
+                        <img src="./images/icons/quotes.svg" alt="quotation" class="quotation-img" width="26">
+          
+                        <p class="testimonial-desc">
+                          Lorem ipsum dolor sit amet consectetur Lorem ipsum
+                          dolor dolor sit amet.
+                        </p>
+          
+                      </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+         <div class="container">
+            <div class="cta-container ">
+
+                <img src="./images/cta-banner.jpg" alt="summer collection" class="cta-banner">
+    
+                <a href="#" class="cta-content">
+    
+                  <p class="discount">25% Discount</p>
+    
+                  <h2 class="cta-title">Summer collection</h2>
+    
+                  <p class="cta-text">Starting @ $10</p>
+    
+                  <button class="cta-btn">Shop now</button>
+    
+                </a>
+    
+              </div>
+         </div>
+    </main>
+    <!-- JAVASCRIP -->
+     <script src="./js/main.js"></script>
+</body>
+
+</html>
